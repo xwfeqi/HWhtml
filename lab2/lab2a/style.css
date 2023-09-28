@@ -28,7 +28,11 @@ body {
     text-align: center;
     font-size: 40px;
     padding-top: 30px;
+    margin-bottom: 20px;
     
+        .number{
+            color: red;
+        }
    }
 
    .number{
