@@ -1,0 +1,149 @@
+body, html{
+
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.shadow
+{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgb(0,0,0,0.75) 2% ,rgb(0,0,0,0)98% );
+  z-index: 0;
+}
+
+.background 
+{
+
+  background-image: url(./pictures/FFTablet_1100x.progressive.webp);
+  height: 100%; 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+.title-text
+{ 
+  
+  font-family: Young Serif;
+  margin: 0;
+  position: absolute;
+  color: white;
+  font-size: 100px;
+  top: 25%;
+  left: 25%;
+  letter-spacing: 20px;
+  text-align: justify
+
+}
+
+.title
+{  
+  font-size: 20px;
+  margin: 0;
+  color: white;
+  position: absolute;
+  top: 40%;
+  left: 55%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  letter-spacing: 5px;
+  padding-top: 20px;
+}
+
+.menu
+{
+  font-family: Roboto Slab;
+  font-size: 20px;
+  font-weight: 500;
+  color: white;
+  position: absolute;
+  top: 5%;
+  left: 3%;
+  word-spacing: 1cm;
+}
+
+.footer
+{
+  font-size: 120%;
+  font-weight: 500;
+  font-family: Raleway;
+  color: white;
+  position: absolute;
+  margin: 0;
+  top: 75%;
+  left: 5%;
+  margin-left: auto;
+  margin-right: auto;
+  width: 5.5cm;
+  word-spacing: 1%;
+}
+
+.conteiner-logo
+{
+
+  width: 100%;
+  height: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: 7vh;
+  z-index: 0;
+}
+
+
+.emblame > img
+{
+  
+  position: absolute;
+  width: 10%;
+  height: 10%;
+  top: 80%;
+  left: 90%;
+}
+
+
+.container
+{
+  width: 200px;
+  height: 50px;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  z-index: 0;
+}
+
+.card 
+{
+  position: relative;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 800;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 50px;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+}
+
+
+.title img {
+  vertical-align: middle;
+  width: 2%;
+  height: auto;
+  margin-bottom: 1%;
+  margin-left: 0.5%;
+}
