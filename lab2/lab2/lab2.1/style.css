@@ -1,0 +1,65 @@
+body {
+    padding: 0;
+    margin: 0;
+    background: url(https://img.freepik.com/free-photo/distant-shot-of-a-port-with-boats-loaded-with-cargo-and-shipment-during-nighttime_181624-2392.jpg?w=996&t=st=1697037674~exp=1697038274~hmac=69f6ae4e92fd8ec909ba1f8a8181b2adaca312847734330313dd930d39cabd26);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+
+  }
+  .header-1 {
+    margin-top: 20px;
+    font-size: 32.5px;
+    font-weight: bold;
+  }
+  
+  .center {
+    width: 100%;
+    text-align: center;
+  }
+  
+  #description {
+    width: 75%;
+  }
+  
+  .bold {
+    font-weight: bold;
+  }
+  
+  .img-width {
+    width: 50px;
+  }
+  
+  td {
+    float: left;
+    text-align: center;
+    width: 300px;
+    height: 250px;
+    background-color: whitesmoke;
+    background-size: auto;
+    background-repeat: no-repeat;
+  }
+  .margin-top-bottom {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    color: rgba(98, 101, 103, 0.532);
+  }
+  
+  footer {
+    box-sizing: border-box;
+    height: 89px;
+    width: 100%;
+    background-color: rgb(73, 70, 70);
+    color: whitesmoke;
+    text-align: center;
+    margin-top: 148px;
+ 
+  }
+  .email, a{
+    
+    color: black;
+  }
+  .address, .phone{
+    color: rgba(98, 101, 103, 0.532);
+  }
