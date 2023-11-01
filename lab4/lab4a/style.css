@@ -1,0 +1,44 @@
+html{
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    overflow-x: hidden;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+
+.buttons{
+    margin: 0;
+    padding: 0;
+    display: inline;
+    margin-left: 250px;
+    padding: 0;
+    font-family:'Times New Roman', Times, serif;
+    text-decoration: none;
+    text-transform: capitalize;
+    word-spacing: 10px;
+    
+}   
+
+.start-img{
+    background-image: url(./pictures/la.jpeg);
+    background-size: cover;
+    background-position: center;
+    width: 800px;
+    height: 450px;
+    display: flex;
+    position: relative;
+    margin-left: 34vh;  
+    margin-top: 50px;
+    border-radius: 25px;
+    align-items: center;
+}
+.content{
+    margin-left: 50px;
+    margin-bottom: 90px;
+    color: whitesmoke;
+
+}
