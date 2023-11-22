@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h2>Task 1 - triangle area by Herons formula</h2>
+<label>Side 1: <input type="number" id="side1"></label>
+<label>Side 2: <input type="number" id="side2"></label>
+<label>Side 3: <input type="number" id="side3"></label>
+<button onclick="calculateHeron()">Calculate Area</button>
+<p id="result1"></p>
+
+<h2>Task 2 - triangle area by two sides and angle</h2>
+<label>Side 1: <input type="number" id="sideA"></label>
+<label>Side 2: <input type="number" id="sideB"></label>
+<label>Angle (degrees): <input type="number" id="angleC"></label>
+<button onclick="calculateTwoSidesAndAngle()">Calculate Area</button>
+<p id="result2"></p>
+
+<h2>Task 3 - triangle area by side and height</h2>
+<label>Base (side): <input type="number" id="base"></label>
+<label>Height: <input type="number" id="height"></label>
+<button onclick="calculateSideAndHeight()">Calculate Area</button>
+<p id="result3"></p>
+
+<h2>Task 4 - triangle area by three sides and circumradius</h2>
+<label>Side 1: <input type="number" id="sideA5"></label>
+<label>Side 2: <input type="number" id="sideB5"></label>
+<label>Side 3: <input type="number" id="sideC5"></label>
+<label>Circumradius: <input type="number" id="circumradius"></label>
+<button onclick="calculateThreeSidesAndRadius()">Calculate Area</button>
+<p id="result5"></p>
+
+<h2>Task 5 - palindrome checker</h2>
+<label>Enter a number: <input type="text" id="palindromeInput"></label>
+<button onclick="checkPalindrome()">Check Palindrome</button>
+<p id="result6"></p>
+
+<h2>Task 6 - anagram checker</h2>
+<label>Word 1: <input type="text" id="word1"></label>
+<label>Word 2: <input type="text" id="word2"></label>
+<button onclick="checkAnagram()">Check Anagram</button>
+<p id="result7"></p>
+
+<h2>Task 7 - fibonacci sequence</h2>
+<label>Enter position: <input type="number" id="fibonacciInput"></label>
+<button onclick="calculateFibonacci()">Get Fibonacci Number</button>
+<p id="result8"></p>
+
+<h2>Task 8   - fibonacci membership checker</h2>
+<label>Enter a number: <input type="number" id="fibonacciCheck"></label>
+<button onclick="checkFibonacci()">Check Fibonacci Membership</button>
+<p id="result9"></p>
+    <script src="script.js"></script>
+</body>
+</html>
