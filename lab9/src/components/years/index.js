@@ -4,6 +4,8 @@ import { faArrowRight, faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import "./style.css";
 import CalendarContext from "../../context/calendar.context";
 
+
+
 const YearsComponent = () => {
   const { currentDate, setCurrentDate } = useContext(CalendarContext);
 
@@ -11,25 +13,15 @@ const YearsComponent = () => {
 
   const halfCount = 12;
 
-  /**
-   * 2011 2012  2013  2014 2015
-   * 2016 2017  2018  2019 2020
-   * 2021 2022 *2023* 2024 2025
-   * 2026 2027  2028  2029 2030
-   * ...
-   */
   const years = [];
-  for (let i = year; i >= (year - halfCount); i -= 1) {
+  for (let i = year - halfCount; i <= year + halfCount; i++) {
     years.push(i);
   }
-  for (let i = year; i < (year + halfCount); i += 1) {
-    years.push(i);
-  }
-  // => [2023, 2024, ...]
 
   const nextPage = () => {
     setYear((prevYear) => prevYear + 25);
   };
+
   const prevPage = () => {
     setYear((prevYear) => prevYear - 25);
   };
@@ -46,23 +38,13 @@ const YearsComponent = () => {
 
   useEffect(() => {
     if (localStorage.getItem("events")) {
-      let a = JSON.parse(localStorage.getItem("events"));
-      let keysMassive = [];
-      for (let i = 0; i < Object.keys(a).length; i++) {
-        keysMassive.push(Object.keys(a)[i].split("-"));
-      }
+      let events = JSON.parse(localStorage.getItem("events"));
+      let keysMassive = Object.keys(events).map((key) => {
+        return key.split("-")[0];
+      });
       setKeysYears(keysMassive);
     }
   }, []);
-
-  let datesMass = [];
-  const checker = (showYear) => {
-    keysYears.map((numb) => {
-      if (parseInt(numb[0]) === showYear) {
-        return datesMass.push(showYear);
-      }
-    });
-  };
 
   return (
     <div className="years-wrapper content-wrapper">
@@ -79,46 +61,22 @@ const YearsComponent = () => {
           onClick={nextPage}
         />
       </div>
-      {Array(halfCount)
+      {Array(halfCount * 2 + 1)
         .fill(null)
-        .map((_el, index) => {
+        .map((_, index) => {
           const showYear = year - halfCount + index;
 
-          checker(showYear);
-          return (
-            <div
-              className={
-                datesMass.includes(showYear)
-                  ? "year content-item green"
-                  : "year content-item "
-              }
-              onClick={() => {
-                click(showYear);
-                console.log(index);
-              }}
-            >
-              {showYear}
-            </div>
-          );
-        })}
-      <div className="year content-item" onClick={() => click(year)}>
-        {year}
-      </div>
-      {Array(halfCount)
-        .fill(null)
-        .map((_el, index) => {
-          const showYear = year + index + 1;
-
-          checker(showYear)
           return (
             <div
               key={index}
               className={
-                datesMass.includes(showYear)
+                keysYears.includes(showYear.toString())
                   ? "year content-item green"
-                  : "year content-item "
+                  : "year content-item"
               }
-              onClick={() => click(showYear)}
+              onClick={() => {
+                click(showYear);
+              }}
             >
               {showYear}
             </div>
@@ -128,4 +86,6 @@ const YearsComponent = () => {
   );
 };
 
+
 export default YearsComponent;
+

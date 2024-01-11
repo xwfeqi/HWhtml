@@ -29,21 +29,21 @@ const MonthsComponent = () => {
 
   let datesMass = [];
   const checker = (i) => {
-    keysMonths.map((numb) => {
+    keysMonths.forEach((numb) => {
       if (
         parseInt(numb[1]) === i &&
         parseInt(numb[0]) === currentDate.getFullYear()
       ) {
-        return datesMass.push(parseInt(numb[1]));
+        datesMass.push(parseInt(numb[1]));
       }
     });
   };
+
 
   return (
     <div className="months-wrapper content-wrapper">
       <div className="header">{MONTHS[currentDate.getMonth()]}</div>
       {MONTHS.map((month, i) => {
-        // console.log(i)
         checker(i);
         return (
           <div
@@ -64,5 +64,6 @@ const MonthsComponent = () => {
     </div>
   );
 };
+
 
 export default MonthsComponent;

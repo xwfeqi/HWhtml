@@ -2,7 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import { MONTHS } from "../shared/months";
 import "./style.css";
 import CalendarContext from "../../context/calendar.context";
-import { logDOM } from "@testing-library/react";
+
 
 const WEEK_DAYS = [
   "Sunday",
@@ -17,6 +17,7 @@ const WEEK_DAYS = [
 function getDaysInMonth(year, month) {
   return new Date(year, month + 1, 0).getDate();
 }
+
 
 const MonthComponent = () => {
   const { currentDate, setCurrentDate } = useContext(CalendarContext);
@@ -34,18 +35,6 @@ const MonthComponent = () => {
     });
   };
 
-  // const dayComponents = [];
-  // for (let i = 1; i <= daysCount; i += 1) {
-  //   const date = new Date(currentDate);
-  //   date.setDate(i);
-  //   const dayOfWeek = date.getDay();
-  //   dayComponents.push(
-  //     <div
-  //       style={{ "--day-col-start": dayOfWeek }}
-  //       className='content-item day'
-  //     >{i}</div>
-  //   );
-  // }
   const [keys, setKeys] = useState([]);
 
   useEffect(() => {
@@ -61,28 +50,25 @@ const MonthComponent = () => {
 
   let datesMass = [];
   const checker = (i) => {
-    keys.map((numb) => {
+    keys.forEach((numb) => {
       if (
         numb[2] - 1 === i &&
         parseInt(numb[1]) === currentDate.getMonth() &&
         parseInt(numb[0]) === currentDate.getFullYear()
       ) {
-        return datesMass.push(numb[2] - 1);
+        datesMass.push(numb[2] - 1);
       }
     });
   };
-
   return (
     <div className="content-wrapper month-wrapper">
       <div className="header">{MONTHS[currentMonth]}</div>
       {WEEK_DAYS.map((dayName) => (
         <div className="day-name">{dayName}</div>
       ))}
-      {/* {dayComponents} */}
       {Array(daysCount)
         .fill(null)
         .map((el, i) => {
-          // console.log(el)
           const date = new Date(currentDate);
           date.setDate(i + 1);
           const dayOfWeek = date.getDay();
@@ -110,4 +96,4 @@ const MonthComponent = () => {
   );
 };
 
-export default MonthComponent;
+export default MonthComponent

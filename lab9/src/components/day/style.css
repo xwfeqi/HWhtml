@@ -18,7 +18,7 @@
  font-size: 20px;
  border-right: 2px solid;
  display: flex;
- align-items: start;
+ align-items: flex-start;
  justify-content: center;
 }
 
