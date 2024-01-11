@@ -10,7 +10,7 @@
 .todo-input input[type="text"] {
  flex-grow: 1;
  padding: 16px;
- padding-right: 30px;
+ padding-right: 75px;
  border: none;
  background-color: rgb(33, 33, 33);
  color: #fff;

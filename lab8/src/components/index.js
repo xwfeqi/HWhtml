@@ -9,7 +9,6 @@ const initialTodos = [{ id: 0, title: "Text of todo item" }];
 function App() {
   const [todos, setTodos] = useState(initialTodos);
   const [filteredTodos, setFilteredTodos] = useState([]);
-  const [inputText, setInputText] = useState("");
 
   useEffect(() => {
     setFilteredTodos(todos);
